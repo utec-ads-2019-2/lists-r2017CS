@@ -1,0 +1,11 @@
+template <typename T>
+list<T>::list()
+{
+	
+}
+
+template <typename T>
+list<T>::~list()
+{
+	
+}

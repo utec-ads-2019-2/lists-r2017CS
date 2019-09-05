@@ -1,12 +1,13 @@
-#ifndef CIRCULAR_H
-#define CIRCULAR_H
+#ifndef FORWARD_H
+#define FORWARD_H
 
 #include "list.h"
 
 template <typename T>
-class CircularLinkedList : public List<T> {
+class ForwardList : public list<T>
+{
     public:
-        CircularLinkedList() : List<T>() {}
+        ForwardList() : list<T>() {}
 
         T front() {
             // TODO
@@ -56,19 +57,19 @@ class CircularLinkedList : public List<T> {
             // TODO
         }
 
-        string name() {
-            return "Circular Linked List";
+        std::string name() {
+            return "Forward list";
         }
 
-        BidirectionalIterator<T> begin() {
-            // TODO
-        }
+        // ForwardIterator<T> begin() {
+        //     // TODO
+        // }
 
-	    BidirectionalIterator<T> end() {
-            // TODO
-        }
+				// ForwardIterator<T> end() {
+        //     // TODO
+        // }
 
-        void merge(CircularLinkedList<T> list) {
+        void merge(ForwardList<T> list) {
             // TODO
         }
 };
