@@ -1,6 +1,12 @@
 # Sources
 #		https://www.partow.net/programming/makefile/index.html
 #			Makefiles examples for big projects
+#		https://stackoverflow.com/questions/38220081/what-does-o-d-mean-in-a-makefile
+#			What does “$(@:%.o=%.d)” mean in a makefile?
+#		https://stackoverflow.com/questions/3220277/what-do-the-makefile-symbols-and-mean/3220288#3220288
+#			What do the makefile symbols $@ and $< mean?
+#		https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html#Automatic-Variables
+#			GNU Make Manual (automatic variables)
 #
 #	Notes
 #		File organization
@@ -35,5 +41,30 @@ APP_DIR = $(BUILD)/app
 TARGET := main
 
 # Directories to include during compilation
-INCLUDE := -iquote src/lists/
+INCLUDE := -iquote include
 
+# Source files or translation units
+SRC := $(wildcard src/*.cpp)
+
+# Object files from files from src
+OBJECTS := $(SRC:%.cpp=$(OBJ_DIR)/%.o)
+
+all: clean build $(APP_DIR)/$(TARGET) exe
+
+$(OBJ_DIR)/%.o: %.cpp
+	mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ -c $<
+
+$(APP_DIR)/$(TARGET): $(OBJECTS)
+	mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $(APP_DIR)/$(TARGET) $(OBJECTS)
+
+build:
+	mkdir -p $(APP_DIR)
+
+clean:
+	rm -rf $(OBJ_DIR)/*
+	rm -rf $(APP_DIR)/*
+
+exe:
+	./$(APP_DIR)/$(TARGET)
