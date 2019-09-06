@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 int main()
 {
-	circular_linked_list<int> items_1;
+	my::circular_linked_list<int> items_1;
 
 	return 0;
 }
