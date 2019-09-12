@@ -6,11 +6,11 @@
 namespace my
 {
 	template <typename T>
-	class list
+	class base_list
 	{
 		public:
-			list();
-			~list();
+			base_list();
+			~base_list();
 	
 			virtual T front() = 0;
 			virtual T back() = 0;
@@ -28,6 +28,6 @@ namespace my
 	};
 } // namespace my
 
-#include "list.hppt"
+#include "base_list.hppt"
 
 #endif

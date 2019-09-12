@@ -4,10 +4,10 @@
 #include "list.h"
 
 template <typename T>
-class LinkedList : public list<T>
+class list : public list<T>
 {
 	public:
-	LinkedList() : list<T>() {}
+	list() : list<T>() {}
 
 	T front() {
 	// TODO
@@ -70,9 +70,12 @@ class LinkedList : public list<T>
 	// // TODO
 	// }
 
-	void merge(LinkedList<T> list) {
+	void merge(list<T> list) {
 	// TODO
 	}
+
 };
+
+#include "list_linked.hppt"
 
 #endif

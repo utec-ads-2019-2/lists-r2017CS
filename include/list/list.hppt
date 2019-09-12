@@ -1,0 +1,93 @@
+namespace my
+{
+	template <typename T>
+	list<T>::list()
+	{
+	
+	}
+	
+	template <typename T>
+	std::string list<T>::name()
+	{
+		return std::string();	
+	}
+	
+	template <typename T>
+	T list<T>::back()
+	{
+		return T();	
+	}
+	
+	template <typename T>
+	T list<T>::front()
+	{
+		return T();	
+	}
+	
+	template <typename T>
+	bool list<T>::empty()
+	{
+		return bool();	
+	}
+	
+	template <typename T>
+	std::size_t list<T>::size()
+	{
+		return std::size_t();	
+	}
+	
+	template <typename T>
+	void list<T>::clear()
+	{
+	
+	}
+	
+	template <typename T>
+	void list<T>::pop_back()
+	{
+	
+	}
+	
+	template <typename T>
+	void list<T>::pop_front()
+	{
+	
+	}
+	
+	template <typename T>
+	void list<T>::push_back(const T& item)
+	{
+	
+	}
+	
+	template <typename T>
+	void list<T>::push_front(const T& item)
+	{
+	
+	}
+	
+	template <typename T>
+	void list<T>::reverse()
+	{
+	
+	}
+	
+	template <typename T>
+	void list<T>::sort()
+	{
+	
+	}
+	
+	template <typename T>
+	void list<T>::merge(list<T> items)
+	{
+	
+	}
+	
+	template <typename T>
+	T list<T>::operator [] (const int& index)
+	{
+		return T();		
+	}
+	
+} // namespace my

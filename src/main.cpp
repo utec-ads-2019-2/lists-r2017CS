@@ -17,11 +17,11 @@ int main(int argc, char *argv[])
 
 #else
 
-#include "list_circular.hpp"
+#include "forward_list.hpp"
 
 int main()
 {
-	my::circular_linked_list<int> items_1;
+	my::forward_list<int> items_1;
 
 	return 0;
 }

@@ -1,13 +1,13 @@
 namespace my
 {
 	template <typename T>
-	list<T>::list()
+	base_list<T>::base_list()
 	{
 	
 	}
 	
 	template <typename T>
-	list<T>::~list()
+	base_list<T>::~base_list()
 	{
 	
 	}

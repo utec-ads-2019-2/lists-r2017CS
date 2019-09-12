@@ -1,12 +1,12 @@
-#ifndef CIRCULAR_H
-#define CIRCULAR_H
+#ifndef FORWARD_H
+#define FORWARD_H
 
-#include "list.hpp"
+#include "base_list.hpp"
 
 namespace my
 {
 	template <typename T>
-	class circular_linked_list : public list<T>
+	class forward_list : public base_list<T>
 	{
 		public:
 			class node
@@ -17,7 +17,7 @@ namespace my
 				void kill_self();
 			};
 	
-			circular_linked_list();
+			forward_list();
 	
 			std::string name() 										override;
 			T 					back() 										override; 
@@ -32,7 +32,7 @@ namespace my
 			void 				reverse()									override; 
 	
 			void sort() 													override; 
-			void merge(circular_linked_list<T>);
+			void merge(forward_list<T>);
 	
 			T operator[] (const int& index) 			override;
 	
@@ -51,6 +51,6 @@ namespace my
 	};
 } // namespace my
 
-#include "list_circular.hppt"
+#include "forward_list.hppt"
 
 #endif

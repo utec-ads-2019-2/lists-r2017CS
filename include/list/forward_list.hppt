@@ -1,0 +1,93 @@
+namespace my
+{
+	template <typename T>
+	forward_list<T>::forward_list()
+	{
+	
+	}
+	
+	template <typename T>
+	std::string forward_list<T>::name()
+	{
+		return std::string();	
+	}
+	
+	template <typename T>
+	T forward_list<T>::back()
+	{
+		return T();	
+	}
+	
+	template <typename T>
+	T forward_list<T>::front()
+	{
+		return T();	
+	}
+	
+	template <typename T>
+	bool forward_list<T>::empty()
+	{
+		return bool();	
+	}
+	
+	template <typename T>
+	std::size_t forward_list<T>::size()
+	{
+		return std::size_t();	
+	}
+	
+	template <typename T>
+	void forward_list<T>::clear()
+	{
+	
+	}
+	
+	template <typename T>
+	void forward_list<T>::pop_back()
+	{
+	
+	}
+	
+	template <typename T>
+	void forward_list<T>::pop_front()
+	{
+	
+	}
+	
+	template <typename T>
+	void forward_list<T>::push_back(const T& item)
+	{
+	
+	}
+	
+	template <typename T>
+	void forward_list<T>::push_front(const T& item)
+	{
+	
+	}
+	
+	template <typename T>
+	void forward_list<T>::reverse()
+	{
+	
+	}
+	
+	template <typename T>
+	void forward_list<T>::sort()
+	{
+	
+	}
+	
+	template <typename T>
+	void forward_list<T>::merge(forward_list<T> items)
+	{
+	
+	}
+	
+	template <typename T>
+	T forward_list<T>::operator [] (const int& index)
+	{
+		return T();		
+	}
+	
+} // namespace my
