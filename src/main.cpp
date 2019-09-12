@@ -17,11 +17,32 @@ int main(int argc, char *argv[])
 
 #else
 
+/*
+ __________________
+/\                 \  
+\_|                |  
+  |   To-do list   |  
+  |                |  
+  |  ______________|_ 
+  \_/_______________/
+
+* Change iterator names.
+* Compile and execute the tests.
+
+*/
+
 #include "forward_list.hpp"
 
 int main()
 {
 	my::forward_list<int> items_1;
+
+	items_1.push_back(12);
+	items_1.push_front(13);
+
+	items_1.print();
+	items_1.reverse();
+	items_1.print();
 
 	return 0;
 }

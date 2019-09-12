@@ -1,81 +1,56 @@
 #ifndef LINKED_H
 #define LINKED_H
 
-#include "list.h"
+#include "base_list.hpp"
 
-template <typename T>
-class list : public list<T>
+namespace my
 {
-	public:
-	list() : list<T>() {}
-
-	T front() {
-	// TODO
-	}
-
-	T back() {
-	// TODO
-	}
-
-	void push_front(T value) {
-	// TODO
-	}
-
-	void push_back(T value) {
-	// TODO
-	}
-
-	void pop_front() {
-	// TODO
-	}
-
-	void pop_back() {
-	// TODO
-	}
-
-	T operator[](int index) {
-	// TODO
-	}
-
-	bool empty() {
-	// TODO
-	}
-
-	int size() {
-	// TODO
-	}
-
-	void clear() {
-	// TODO
-	}
-
-	void sort() {
-	// TODO
-	}
-
-	void reverse() {
-	// TODO
-	}
-
-	std::string name()
+	template <typename T>
+	class list : public base_list<T>
 	{
-		return "Linked list";
-	}
+		public:
+			class node
+			{
+				T data;
+				node* next;
+	
+				void kill_self();
+			};
+	
+			list();
+	
+			std::string name() 										override;
+			T 					back() 										override; 
+			T 					front() 									override;
+			bool 				empty() 									override;
+			std::size_t size() 										override;
+			void 				clear() 									override; 
+			void 				pop_back() 								override; 
+			void 				pop_front() 							override;
+			void 				push_back(const T&) 			override; 
+			void 				push_front(const T&) 			override;
+			void 				reverse()									override; 
+	
+			void sort() 													override; 
+			void merge(list<T>);
+	
+			T operator[] (const int& index) 			override;
+	
+			// BidirectionalIterator<T> begin()
+			// {
+			// 	// TODO
+			// }
+	
+			// BidirectionalIterator<T> end()
+			// {
+			// 	// TODO
+			// }
+		private:
+			node* head;
+			node* tail;
+	};
+} // namespace my
 
-	// BidirectionalIterator<T> begin() {
-	// // TODO
-	// }
-
-	// BidirectionalIterator<T> end() {
-	// // TODO
-	// }
-
-	void merge(list<T> list) {
-	// TODO
-	}
-
-};
-
-#include "list_linked.hppt"
+#include "list.hppt"
 
 #endif

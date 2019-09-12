@@ -1,39 +1,61 @@
 namespace my
 {
 	template <typename T>
-	forward_list<T>::forward_list()
+	forward_list<T>::forward_list(): head(nullptr), tail(nullptr)
 	{
+
+	}
 	
+	template <typename T>
+	forward_list<T>::~forward_list()
+	{
+		// TODO: Is there any problem if I delete a pointer whose value is 'nullptr'.
+		// TODO: Make sure that I don't delete the same variable twice.
 	}
 	
 	template <typename T>
 	std::string forward_list<T>::name()
 	{
-		return std::string();	
+		return "Forward list";	
 	}
 	
 	template <typename T>
 	T forward_list<T>::back()
 	{
-		return T();	
+		if(this -> empty())
+			throw std::runtime_error("forward_list<T>::back(): " + ex_forward_list_empty);
+
+		return tail -> data;
 	}
 	
 	template <typename T>
 	T forward_list<T>::front()
 	{
-		return T();	
+		if(this -> empty())
+			throw std::runtime_error("forward_list<T>::front(): " + ex_forward_list_empty);
+
+		return head -> data;
 	}
 	
 	template <typename T>
 	bool forward_list<T>::empty()
 	{
-		return bool();	
+		if(head == nullptr && tail == nullptr)
+			return true;
+		return false;
 	}
 	
 	template <typename T>
 	std::size_t forward_list<T>::size()
 	{
-		return std::size_t();	
+		node* current = head;
+		std::size_t counter {0};
+		while(current != nullptr)
+		{
+			current = current -> next;
+			counter++;
+		}
+		return counter;
 	}
 	
 	template <typename T>
@@ -57,25 +79,63 @@ namespace my
 	template <typename T>
 	void forward_list<T>::push_back(const T& item)
 	{
-	
+		node* temp = new node;
+		temp -> data = item;
+
+		if(empty())
+			head = temp;
+		else
+			tail -> next = temp;
+
+		tail = temp;
 	}
 	
 	template <typename T>
 	void forward_list<T>::push_front(const T& item)
 	{
-	
+		node* temp = new node;
+		temp -> data = item;
+
+		if(empty())
+			tail = temp;
+		else
+			temp -> next = head;
+
+		head = temp;
 	}
 	
 	template <typename T>
 	void forward_list<T>::reverse()
 	{
-	
+		node* p, c, n;
+		p = nullptr;
+		c = head;
+		while(c != nullptr)
+		{
+			n = c -> next;
+			c -> next = prec;
+		}
 	}
 	
 	template <typename T>
 	void forward_list<T>::sort()
 	{
 	
+	}
+
+	template <typename T>
+	void forward_list<T>::print()
+	{
+		node* current = head;
+		std::cout<<"{";
+		while(current != nullptr)
+		{
+			std::cout<<current -> data;
+			if(current -> next != nullptr)
+				std::cout<<", ";
+			current = current -> next;	
+		}
+		std::cout<<"}";
 	}
 	
 	template <typename T>
@@ -89,5 +149,75 @@ namespace my
 	{
 		return T();		
 	}
+
+	//  __________________________
+	// /\                         \  
+	// \_|                        |  
+	//   |   Node class methods   |  
+	//   |                        |  
+	//   |  ______________________|_ 
+	//   \_/_______________________/
 	
+	template <typename T>
+	forward_list<T>::node::node(): next(nullptr)
+	{
+			
+	}
+
+	template <typename T>
+	forward_list<T>::node::~node()
+	{
+		delete next;
+	}
+
+	template <typename T>
+	void forward_list<T>::node::kill_self()
+	{
+		node* temp = head;
+	}
+
+	//  ______________________________________
+	// /\                                     \  
+	// \_|                                    |  
+	//   |   forward_iterator class methods   |  
+	//   |                                    |  
+	//   |  __________________________________|_ 
+	//   \_/___________________________________/
+
+	template <typename T>
+	forward_list<T>::forward_iterator::forward_iterator()
+	{
+		
+	}
+
+	template <typename T>
+	forward_list<T>::forward_iterator::forward_iterator(node cnode)
+	{
+		
+	}
+
+	template <typename T>
+	typename forward_list<T>::forward_iterator	forward_list<T>::forward_iterator::operator= (forward_iterator other)
+	{
+		
+	}
+	
+	template <typename T>
+	bool forward_list<T>::forward_iterator::operator!= (forward_iterator other)
+	{
+		return bool();
+	}
+
+	template <typename T>
+	typename forward_list<T>::forward_iterator forward_list<T>::forward_iterator::operator++ ()
+	{
+		
+	}
+
+	template <typename T>
+	T forward_list<T>::forward_iterator::operator*()
+	{
+		
+	}
+		
 } // namespace my

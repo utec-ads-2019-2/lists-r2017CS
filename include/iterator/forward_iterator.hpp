@@ -1,29 +1,22 @@
 #ifndef FORWARD_ITERATOR_H
 #define FORWARD_ITERATOR_H
 
-#include "../iterator.h"
+#include "base_iterator.hpp"
 
-template <typename T> 
-class ForwardIterator : public Iterator<T> {
-    public:
-        ForwardIterator() : Iterator<T>() {};
-        ForwardIterator(Node<T> *node) : Iterator<T>(node) {};
-
-        ForwardIterator<T> operator=(ForwardIterator<T> other) {
-            // TODO
-        }
-
-        bool operator!=(ForwardIterator<T> other) {
-            // TODO
-        }
-
-        ForwardIterator<T> operator++() {
-            // TODO
-        }
-
-        T operator*() {
-            // TODO
-        }
-};
+// namespace my
+// {
+// 	template <typename T, typename Y>
+// 	class forward_iterator : public base_iterator<T, Y>
+// 	{
+// 		public:
+// 			forward_iterator();
+// 			forward_iterator(Y *node);
+// 
+// 			forward_iterator<T,Y> operator=(forward_iterator<T,Y> other);
+// 			bool operator!=(forward_iterator<T,Y> other);
+// 			forward_iterator<T,Y> operator++();
+// 			T operator*();
+// 	};
+// } // namespace my
 
 #endif

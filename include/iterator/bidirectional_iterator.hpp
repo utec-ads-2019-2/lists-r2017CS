@@ -3,31 +3,36 @@
 
 #include "../iterator.h"
 
-template <typename T> 
-class BidirectionalIterator : public Iterator<T> {
-    public:
-        BidirectionalIterator() : Iterator<T>() {};
-        BidirectionalIterator(Node<T> *node) : Iterator<T>(node) {};
+namespace my
+{
+	template <typename T> 
+	class bidirectional_iterator : public base_iterator<T>
+	{
+		public:
+		bidirectional_iterator() : base_iterator<T>() {};
+		bidirectional_iterator(Node<T> *node) : base_iterator<T>(node) {};
 
-        BidirectionalIterator<T> operator=(BidirectionalIterator<T> other) {
-            // TODO
-        }
+		bidirectional_iterator<T> operator=(bidirectional_iterator<T> other) {
+		// TODO
+		}
 
-        bool operator!=(BidirectionalIterator<T> other) {
-            // TODO
-        }
+		bool operator!=(bidirectional_iterator<T> other) {
+		// TODO
+		}
 
-        BidirectionalIterator<T> operator++() {
-            // TODO
-        }
+		bidirectional_iterator<T> operator++() {
+		// TODO
+		}
 
-        BidirectionalIterator<T> operator--() {
-            // TODO
-        }
+		bidirectional_iterator<T> operator--() {
+		// TODO
+		}
 
-        T operator*() {
-            // TODO
-        }
-};
+		T operator*() {
+		// TODO
+		}
+	};
+	
+} // namespace my
 
 #endif

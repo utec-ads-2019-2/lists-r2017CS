@@ -1,0 +1,40 @@
+#include "forward_iterator.hpp"
+
+// namespace my
+// {
+// 	template <typename T, typename Y>
+// 	forward_iterator::forward_iterator()
+// 	{
+// 	
+// 	};
+// 	
+// 	template <typename T, typename Y>
+// 	forward_iterator::forward_iterator(Y* node): base_iterator<T,Y>(node)
+// 	{
+// 	
+// 	}
+// 	
+// 	template <typename T, typename Y>
+// 	forward_iterator<T,Y> forward_iterator::operator=(forward_iterator<T,Y> other)
+// 	{
+// 	
+// 	}
+// 
+// 	template <typename T, typename Y>
+// 	bool forward_iterator::operator!=(forward_iterator<T,Y> other)
+// 	{
+// 
+// 	}
+// 
+// 	template <typename T, typename Y>
+// 	forward_iterator<T,Y> forward_iterator::operator++()
+// 	{
+// 
+// 	}
+// 
+// 	template <typename T, typename Y>
+// 	T forward_iterator::operator*()
+// 	{
+// 
+// 	}
+// } // namespace my

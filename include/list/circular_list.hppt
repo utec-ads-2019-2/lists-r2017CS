@@ -1,91 +1,91 @@
 namespace my
 {
 	template <typename T>
-	circular_linked_list<T>::circular_linked_list()
+	circular_list<T>::circular_list()
 	{
 	
 	}
 	
 	template <typename T>
-	std::string circular_linked_list<T>::name()
+	std::string circular_list<T>::name()
 	{
 		return std::string();	
 	}
 	
 	template <typename T>
-	T circular_linked_list<T>::back()
+	T circular_list<T>::back()
 	{
 		return T();	
 	}
 	
 	template <typename T>
-	T circular_linked_list<T>::front()
+	T circular_list<T>::front()
 	{
 		return T();	
 	}
 	
 	template <typename T>
-	bool circular_linked_list<T>::empty()
+	bool circular_list<T>::empty()
 	{
 		return bool();	
 	}
 	
 	template <typename T>
-	std::size_t circular_linked_list<T>::size()
+	std::size_t circular_list<T>::size()
 	{
 		return std::size_t();	
 	}
 	
 	template <typename T>
-	void circular_linked_list<T>::clear()
+	void circular_list<T>::clear()
 	{
 	
 	}
 	
 	template <typename T>
-	void circular_linked_list<T>::pop_back()
+	void circular_list<T>::pop_back()
 	{
 	
 	}
 	
 	template <typename T>
-	void circular_linked_list<T>::pop_front()
+	void circular_list<T>::pop_front()
 	{
 	
 	}
 	
 	template <typename T>
-	void circular_linked_list<T>::push_back(const T& item)
+	void circular_list<T>::push_back(const T& item)
 	{
 	
 	}
 	
 	template <typename T>
-	void circular_linked_list<T>::push_front(const T& item)
+	void circular_list<T>::push_front(const T& item)
 	{
 	
 	}
 	
 	template <typename T>
-	void circular_linked_list<T>::reverse()
+	void circular_list<T>::reverse()
 	{
 	
 	}
 	
 	template <typename T>
-	void circular_linked_list<T>::sort()
+	void circular_list<T>::sort()
 	{
 	
 	}
 	
 	template <typename T>
-	void circular_linked_list<T>::merge(circular_linked_list<T> items)
+	void circular_list<T>::merge(circular_list<T> items)
 	{
 	
 	}
 	
 	template <typename T>
-	T circular_linked_list<T>::operator [] (const int& index)
+	T circular_list<T>::operator [] (const int& index)
 	{
 		return T();		
 	}
